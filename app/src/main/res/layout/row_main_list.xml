@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/colorPrimary"
+    android:paddingTop="10dp"
+    tools:context=".ui.main.MainActivity">
+
+    <ImageView
+        android:id="@+id/ivThumb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_height"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLength="50"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:text="gal gadot" />
+
+    <LinearLayout
+        android:id="@+id/llUpVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvName"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_thumb_up" />
+
+        <TextView
+            android:id="@+id/tvUpVote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            tools:text="12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llDownVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvName"
+        android:layout_toEndOf="@+id/llUpVote"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:rotation="180"
+            android:src="@drawable/ic_thumb_down" />
+
+        <TextView
+            android:id="@+id/tvDownVote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            tools:text="12" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
